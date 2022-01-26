@@ -1,0 +1,45 @@
+<div class="restaurent-info">
+  <img src="./assets/img/res1.webp" class="img-fluid" alt="">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="row">
+
+        <h5 class="vendor-title">King Food</h5>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="dish-category" *ngFor="let item of food_items">
+      <div class="container">
+        <div class="col-md-12 ">
+          <!-- <h6 class="dish-category-header"> <i class="ion-ios-more"></i> {{item.catr}} <i class="ion-ios-more"></i></h6> -->
+          <ul class="dish-list ">
+            <li class="row">
+              <div class="dish-title col-md-8">
+                <h6>{{item.name}}</h6>
+                <!-- <p>
+                  {{dish.description}}
+                </p> -->
+              </div>
+         
+  
+              <div class="price col-md-2"> {{item.price}} tk</div>
+              <div (click)="selectDish(item)" class="col-md-2"> <i class="fa fa-plus"></i>+</div>
+  
+            </li>
+  
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="order-info pb-5 mb-5">
+  <div class="container">
+    <div class="col-md-12">
+     <div class="row">
+       <app-cart #cart [cartList]="cartList"></app-cart>
+     </div>
+    </div>
+  </div>
+</div>

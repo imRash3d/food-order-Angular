@@ -1,0 +1,6 @@
+<input class="form-control" [placeholder]="placeholder" (ngModelChange)="selectDate($event)" name="dp" [(ngModel)]="rental_date" ngbDatepicker #d="ngbDatepicker">
+<div class="input-group-append">
+    <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+        <img src="./assets/img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+    </button>
+</div>
